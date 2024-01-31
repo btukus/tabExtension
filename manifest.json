@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Switcher",
+    "version": "1.0",
+    "permissions": ["tabs", "activeTab"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "commands": {
+        "open-popup": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+E",
+                "mac": "Command+Shift+E"
+            },
+            "description": "Open Tab Switcher"
+        }
+    }
+}

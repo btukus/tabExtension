@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab Switcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Light text color */
+        }
+        #container {
+            text-align: center;
+        }
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            background-color: #444; /* Darker input background color */
+            color: #0f0; /* Green text color for digital clock appearance */
+            border: none; /* Remove input border */
+            padding: 15px; /* Adjust padding to make input taller */
+            width: 150px; /* Adjust width to make input wider */
+            font-family: "Courier New", monospace; /* Use monospace font */
+            font-size: 24px; /* Adjust font size for digital clock appearance */
+            text-align: center; /* Center text horizontally */
+        }
+        input[type="number"]:focus {
+            outline: none; /* Remove focus outline on input */
+        }
+        button {
+            background-color: #0077cc; /* Dark blue button background color */
+            color: #fff; /* Light text color for button */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0055aa; /* Darker blue on hover */
+        }
+        #themeSelector select {
+            margin-bottom: 10px;
+        }
+        #error {
+            color: #ff0000; /* Red error message color */
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="centered" id="error">Tab not found. Please enter a valid number.</div>
+        <h1>Enter Tab Number</h1>
+        <input type="number" id="tabNumber" min="0" placeholder="Tab number" autofocus>
+    </div>
+
+    <script src="tab-switcher.js"></script>
+</body>
+</html>
